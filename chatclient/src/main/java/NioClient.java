@@ -1,5 +1,6 @@
 import services.*;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.channels.SocketChannel;
@@ -7,10 +8,13 @@ import java.nio.channels.SocketChannel;
 public class NioClient {
 
     public static void main(String[] args) {
+        final String fileSettingsPath = new File(".", "/src/main/resources/settings.json").getAbsolutePath();
+        final String fileLogPath = new File(".", "/src/main/resources/file.log").getAbsolutePath();
+
         try {
             Configuration config = Configuration.getInstance();
-            config.setFileSettings("/home/irmate/Документы/Develop/java лекции/Курсач 2/chatserver/src/main/resources/settings.json");
-            config.setFileLog("/home/irmate/Документы/Develop/java лекции/Курсач 2/chatclient/src/main/resources/file.log");
+            config.setFileSettings(fileSettingsPath);
+            config.setFileLog(fileLogPath);
 
             SocketChannelCreator scc = new SocketChannelCreator();
             scc.setHostName("localhost");
