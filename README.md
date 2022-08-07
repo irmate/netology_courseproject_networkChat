@@ -11,4 +11,4 @@
 
 #### Код приложений основан на принципе неблокирующего ввода-вывода (Non-Blocking IO)
 
-##[Техническое задание](https://github.com/netology-code/jd-homeworks/blob/master/diploma/networkchat.md)
+[Техническое задание](https://github.com/netology-code/jd-homeworks/blob/master/diploma/networkchat.md)
